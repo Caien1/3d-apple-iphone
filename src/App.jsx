@@ -1,33 +1,17 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useState } from 'react'
 
-import {
-  GsapFrom,
-  GsapFromTo,
-  GsapScrollTrigger,
-  GsapStagger,
-  GsapText,
-  GsapTimeline,
-  GsapTo,
-  Home,
-} from "./pages";
 
-const App = () => {
+
+function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <div className="bg-black min-h-screen w-full">
-      <Router>
-        <Routes>
-          <Route path="/gsapto" element={<GsapTo />} />
-          <Route path="/gsapfrom" element={<GsapFrom />} />
-          <Route path="/gsapfromto" element={<GsapFromTo />} />
-          <Route path="/gsaptimeline" element={<GsapTimeline />} />
-          <Route path="/gsapstagger" element={<GsapStagger />} />
-          <Route path="/gsapscrolltrigger" element={<GsapScrollTrigger />} />
-          <Route path="/gsaptext" element={<GsapText />} />
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </Router>
-    </div>
-  );
-};
+    <>
+     <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+    </>
+  )
+}
 
-export default App;
+export default App
